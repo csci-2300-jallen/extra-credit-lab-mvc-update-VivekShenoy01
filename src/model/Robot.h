@@ -29,6 +29,7 @@ public:
     void loadFromFile(const std::string& filePath);
 
 private:
+    int getStep() const;
     void moveTo(int newX, int newY);
     void recordPosition();
 
@@ -37,5 +38,6 @@ private:
     int x = 2;
     int y = 2;
     int currentHistoryIndex = 0;
+    int moveCount = 0;
     std::vector<Point2D> history = {{2, 2}};
 };
